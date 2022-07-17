@@ -8,12 +8,12 @@ https://www.youtube.com/shorts/vIaz0PRW7q0
 ```
 git clone https://github.com/mohamed2m2018/map.git
 npm install or yarn
-npm start
+npm start or yarn start
 ```
 ## Run on android 
 
 ```
-react-native run-android
+react-native run-android  or yarn run android or npm run ios
 ```
  
 ## Run on Ios
@@ -21,7 +21,7 @@ react-native run-android
  ```
  cd ios & pod install
  cd ..
- react-native run-ios
+ react-native run-ios or yarn run ios or npm run ios
 ```
 
 
