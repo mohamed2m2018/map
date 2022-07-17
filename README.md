@@ -49,6 +49,5 @@ React Navigation v6
 Jest
 
 # apk:
-https://easyupload.io/jlcnoz
-
+https://easyupload.io/7zma6o
 
