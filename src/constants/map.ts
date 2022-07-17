@@ -202,7 +202,7 @@ export const PLACES_DATA = [
     description: 'Your favorite ice cream',
     imageOnMap: 'https://i.ibb.co/ZLTFw47/aa-1.png',
     thumbnailImage:
-      'https://www.pngitem.com/pimgs/m/72-727098_unique-ice-cream-logo-design-hd-png-download.png',
+      'https://img.freepik.com/premium-vector/ice-cream-logo-design-illustration_9845-323.jpg',
     latitudeDifference: 0.002,
     longitudeDifference: 0.001,
   },

@@ -88,11 +88,13 @@ const Map: React.FC = () => {
         onChangeText={handleChangeText}
       />
       {!!searchResults?.length && (
-        <ScrollView style={styles.optionsContainer}>
+        <ScrollView
+          keyboardShouldPersistTaps={'always'}
+          style={styles.optionsContainer}>
           <View style={styles.innerOptionsContainer}>
             {searchResults?.map((place: Place) => (
               <TouchableOpacity onPress={() => handleOptionSelection(place)}>
-                <Text>{place?.name}</Text>
+                <Text style={styles.selectionOption}>{place?.name}</Text>
               </TouchableOpacity>
             ))}
           </View>
@@ -132,6 +134,7 @@ const Map: React.FC = () => {
           {PLACES_DATA.map((place: Place) => (
             <Marker
               key={place?.id}
+              // style={Platform.OS === 'android' && {minWidth: 90, minHeight:90}}
               onPress={() => {
                 setSelectedPlace(place);
                 setSearchValue('');
