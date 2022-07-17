@@ -7,7 +7,6 @@ import {
   Text,
   Keyboard,
   Dimensions,
-  Platform,
 } from 'react-native';
 import Input from '../../components/Input';
 import MapView, {Marker} from 'react-native-maps';
@@ -137,7 +136,6 @@ const Map: React.FC = () => {
           {PLACES_DATA.map((place: Place) => (
             <Marker
               key={place?.id}
-              style={Platform.OS === 'android' && styles.markerContainer}
               onPress={() => {
                 setSelectedPlace(place);
                 setSearchValue('');
@@ -149,18 +147,20 @@ const Map: React.FC = () => {
                   (position?.coords?.longitude || 0) +
                   place.longitudeDifference,
               }}>
-              <TouchableOpacity
-                style={[
-                  styles.marker,
-                  place?.id === selectedPlace?.id && styles.markerSelcted,
-                ]}>
-                <Image
-                  style={styles.innerMarkerImage}
-                  source={{
-                    uri: place?.imageOnMap,
-                  }}
-                />
-              </TouchableOpacity>
+              <View style={styles.markerContainer}>
+                <TouchableOpacity
+                  style={[
+                    styles.marker,
+                    place?.id === selectedPlace?.id && styles.markerSelcted,
+                  ]}>
+                  <Image
+                    style={styles.innerMarkerImage}
+                    source={{
+                      uri: place?.imageOnMap,
+                    }}
+                  />
+                </TouchableOpacity>
+              </View>
             </Marker>
           ))}
         </MapView>

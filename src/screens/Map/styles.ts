@@ -66,8 +66,10 @@ const makeStyles = (colors: IColors) =>
       alignSelf: 'center',
     },
     markerContainer: {
-      minWidth: 100,
-      minHeight: 100,
+      height: 80,
+      width: 80,
+      borderRadius: 40,
+      backgroundColor: 'transparent',
     },
   });
 
