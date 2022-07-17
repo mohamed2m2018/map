@@ -131,7 +131,7 @@ const Map: React.FC = () => {
             latitudeDelta: LATITUDE_DELTA,
             longitudeDelta: LONGITUDE_DELTA,
           }}
-          customMapStyle={theme === 'dark' ? DARK_MODE_STYLE : undefined}
+          customMapStyle={theme === 'dark' ? DARK_MODE_STYLE : []}
           style={styles.mapContainer}>
           {PLACES_DATA.map((place: Place) => (
             <Marker

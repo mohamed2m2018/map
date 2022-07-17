@@ -69,9 +69,9 @@ export default function TabNavigator() {
           headerShown: false,
           tabBarIcon: () => (
             <AppIcon
-              type="MaterialIcons"
+              type="Ionicons"
               color={colors.secondary}
-              name="notifications"
+              name="notifications-outline"
               size={25}
             />
           ),
