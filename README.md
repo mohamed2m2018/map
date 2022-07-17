@@ -38,8 +38,11 @@ react-native run-android
 
 # Tools used
 React Native
+
 TypeScript
+
 React Navigation v6
+
 Jest
 
 # apk:
