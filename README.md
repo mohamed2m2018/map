@@ -3,7 +3,7 @@ https://www.youtube.com/shorts/vIaz0PRW7q0
 
 # Instruction to run project:
 1-Go to project folder.
-2-Write in the terminal : yarn to install packages.
+2-Write in the terminal : "yarn" to install packages.
 3-If you are trying on ios simulator: try "pod install" command inside ios folder/
 4-Try "yarn run android" for android, and "yarn run ios" for ios.
 
