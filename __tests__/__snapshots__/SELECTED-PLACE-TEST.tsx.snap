@@ -7,8 +7,8 @@ exports[`Selected Shop renders correctly 1`] = `
       "backgroundColor": "#ffffff",
       "borderRadius": 10,
       "flexDirection": "row",
-      "height": 100,
       "padding": 20,
+      "paddingVertical": 25,
       "width": "100%",
     }
   }
@@ -29,7 +29,13 @@ exports[`Selected Shop renders correctly 1`] = `
     }
     testID="TEST_ID_IMAGE_SHOP"
   />
-  <View>
+  <View
+    style={
+      Object {
+        "flexShrink": 1,
+      }
+    }
+  >
     <Text
       style={
         Object {

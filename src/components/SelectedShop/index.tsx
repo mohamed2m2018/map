@@ -16,7 +16,7 @@ const SelectedShop: React.FC<Props> = props => {
   return (
     <View style={styles.container}>
       <Image
-        testID="TEST_ID_IMAGE_SHOP"
+        testID={TEST_IDS.TEST_ID_IMAGE_SHOP}
         source={{uri: props?.imageUri}}
         resizeMode={'contain'}
         style={styles.image}
