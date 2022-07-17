@@ -5,8 +5,8 @@ const makeStyles = (colors: IColors) =>
   StyleSheet.create({
     container: {
       backgroundColor: colors.primary,
-      height: 100,
       width: '100%',
+      paddingVertical: 25,
       flexDirection: 'row',
       padding: 20,
       borderRadius: 10,
@@ -22,6 +22,9 @@ const makeStyles = (colors: IColors) =>
     },
     subHeader: {
       color: colors.grey,
+    },
+    textContainer: {
+      flexShrink: 1,
     },
   });
 

@@ -21,7 +21,7 @@ const SelectedShop: React.FC<Props> = props => {
         resizeMode={'contain'}
         style={styles.image}
       />
-      <View>
+      <View style={styles.textContainer}>
         <Text testID={TEST_IDS.TEST_ID_SHOP_NAME} style={styles.header}>
           {props?.shopName}
         </Text>
