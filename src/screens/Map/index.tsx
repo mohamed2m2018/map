@@ -3,7 +3,6 @@ import {
   ScrollView,
   TouchableOpacity,
   View,
-  Image,
   Text,
   Keyboard,
   Dimensions,
@@ -22,6 +21,7 @@ import {
 } from '../../helpers/mapHelpers';
 import {GeolocationResponse} from '@react-native-community/geolocation';
 import {Place} from '../../types/places';
+import CustomMarker from '../../components/CustomMarker';
 
 const Map: React.FC = () => {
   const {height, width} = Dimensions.get('window');
@@ -147,20 +147,10 @@ const Map: React.FC = () => {
                   (position?.coords?.longitude || 0) +
                   place.longitudeDifference,
               }}>
-              <View style={styles.markerContainer}>
-                <TouchableOpacity
-                  style={[
-                    styles.marker,
-                    place?.id === selectedPlace?.id && styles.markerSelcted,
-                  ]}>
-                  <Image
-                    style={styles.innerMarkerImage}
-                    source={{
-                      uri: place?.imageOnMap,
-                    }}
-                  />
-                </TouchableOpacity>
-              </View>
+              <CustomMarker
+                isSelected={place?.id === selectedPlace?.id}
+                place={place}
+              />
             </Marker>
           ))}
         </MapView>
