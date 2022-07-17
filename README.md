@@ -13,7 +13,7 @@ npm start or yarn start
 ## Run on android 
 
 ```
-react-native run-android  or yarn run android or npm run ios
+react-native run-android  or yarn run android or npm run android
 ```
  
 ## Run on Ios
