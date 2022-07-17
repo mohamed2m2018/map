@@ -36,6 +36,12 @@ react-native run-android
 
 4- Basic ui similar to the photo provided
 
+# Tools used
+React Native
+TypeScript
+React Navigation v6
+Jest
+
 # apk:
 https://easyupload.io/jlcnoz
 
