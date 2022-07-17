@@ -21,7 +21,6 @@ export default function TabNavigator() {
       }}>
       <Tab.Screen
         options={{
-          headerShown: false,
           tabBarIcon: () => (
             <AppIcon
               type="Feather"
@@ -66,7 +65,6 @@ export default function TabNavigator() {
         component={Dummy}
         name="Notifications"
         options={{
-          headerShown: false,
           tabBarIcon: () => (
             <AppIcon
               type="Ionicons"
@@ -81,7 +79,6 @@ export default function TabNavigator() {
         component={Dummy}
         name="Account"
         options={{
-          headerShown: false,
           tabBarIcon: () => (
             <AppIcon
               type="MaterialCommunityIcons"
