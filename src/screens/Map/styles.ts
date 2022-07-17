@@ -35,10 +35,10 @@ const makeStyles = (colors: IColors) =>
       marginLeft: 20,
     },
     markerSelcted: {
-      width: 40,
-      height: 40,
+      width: 50,
+      height: 50,
       backgroundColor: colors.primary,
-      borderRadius: 20,
+      borderRadius: 25,
       borderWidth: 2,
       borderColor: colors.secondary,
       justifyContent: 'center',
@@ -48,10 +48,10 @@ const makeStyles = (colors: IColors) =>
       color: colors.secondary,
     },
     marker: {
-      width: 30,
-      height: 30,
+      width: 40,
+      height: 40,
       backgroundColor: colors.primary,
-      borderRadius: 15,
+      borderRadius: 20,
       justifyContent: 'center',
       alignItems: 'center',
     },
@@ -64,6 +64,10 @@ const makeStyles = (colors: IColors) =>
       bottom: 80,
       width: '80%',
       alignSelf: 'center',
+    },
+    markerContainer: {
+      minWidth: 100,
+      minHeight: 100,
     },
   });
 

@@ -7,6 +7,7 @@ import {
   Text,
   Keyboard,
   Dimensions,
+  Platform,
 } from 'react-native';
 import Input from '../../components/Input';
 import MapView, {Marker} from 'react-native-maps';
@@ -93,7 +94,9 @@ const Map: React.FC = () => {
           style={styles.optionsContainer}>
           <View style={styles.innerOptionsContainer}>
             {searchResults?.map((place: Place) => (
-              <TouchableOpacity onPress={() => handleOptionSelection(place)}>
+              <TouchableOpacity
+                key={place?.id}
+                onPress={() => handleOptionSelection(place)}>
                 <Text style={styles.selectionOption}>{place?.name}</Text>
               </TouchableOpacity>
             ))}
@@ -134,7 +137,7 @@ const Map: React.FC = () => {
           {PLACES_DATA.map((place: Place) => (
             <Marker
               key={place?.id}
-              // style={Platform.OS === 'android' && {minWidth: 90, minHeight:90}}
+              style={Platform.OS === 'android' && styles.markerContainer}
               onPress={() => {
                 setSelectedPlace(place);
                 setSearchValue('');

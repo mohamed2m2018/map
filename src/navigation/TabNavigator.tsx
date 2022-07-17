@@ -1,9 +1,10 @@
 import React, {useContext} from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {StyleSheet, Text, TouchableOpacity} from 'react-native';
+import {StyleSheet, TouchableOpacity} from 'react-native';
 import Map from '../screens/Map';
 import AppIcon from '../components/AppIcon';
 import {ThemeContext} from '../context/ThemeContext';
+import Dummy from '../screens/Dummy';
 
 const Tab = createBottomTabNavigator();
 
@@ -30,7 +31,7 @@ export default function TabNavigator() {
             />
           ),
         }}
-        component={() => <Text>hello world</Text>}
+        component={Dummy}
         name="Explore"
       />
       <Tab.Screen
@@ -49,7 +50,7 @@ export default function TabNavigator() {
         name="Map"
       />
       <Tab.Screen
-        component={() => <Text>hello world</Text>}
+        component={Dummy}
         options={({navigation}) => ({
           tabBarButton: () => (
             <TouchableOpacity
@@ -62,7 +63,7 @@ export default function TabNavigator() {
         name="Add"
       />
       <Tab.Screen
-        component={() => <Text>hello world</Text>}
+        component={Dummy}
         name="Notifications"
         options={{
           headerShown: false,
@@ -77,7 +78,7 @@ export default function TabNavigator() {
         }}
       />
       <Tab.Screen
-        component={() => <Text>hello world</Text>}
+        component={Dummy}
         name="Account"
         options={{
           headerShown: false,
