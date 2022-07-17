@@ -15,7 +15,6 @@ export default function TabNavigator() {
       initialRouteName="Map"
       screenOptions={{
         tabBarShowLabel: false,
-        tabBarHideOnKeyboard: true,
         tabBarStyle: {
           backgroundColor: colors.tabBarBackground,
         },
