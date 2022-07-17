@@ -28,7 +28,7 @@ react-native run-android
 
 
 # Features:
-1- You can swithc between dark and light mode.
+1- You can switch between dark and light mode.
 
 2- You can search static data.
 
