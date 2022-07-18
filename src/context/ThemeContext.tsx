@@ -6,14 +6,13 @@ interface ContextType {
   setTheme: Dispatch<SetStateAction<'light' | 'dark'>>;
   colors: IColors;
 }
+// Initiate context
 
 const ThemeContext = createContext<ContextType>({
   theme: 'light',
   setTheme: () => {},
   colors: AppColors.lightTheme,
 });
-
-// Initiate context
 
 interface Props {
   children: React.ReactNode;
@@ -23,11 +22,10 @@ const ThemeProvider = ({children}: Props) => {
   // Manage theme state
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
   const colors = theme === 'light' ? AppColors.lightTheme : AppColors.darkTheme;
+  const value = {theme, setTheme, colors};
 
   return (
-    <ThemeContext.Provider value={{theme, setTheme, colors}}>
-      {children}
-    </ThemeContext.Provider>
+    <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
   );
 };
 
